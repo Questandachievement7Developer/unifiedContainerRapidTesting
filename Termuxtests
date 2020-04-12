@@ -1,10 +1,11 @@
 #!/bin/sh
+export SCRIPTCALL=1
 pkg install git -y
 git clone https://github.com/Questandachievement7Developer/UnifiedContainer UCrapidtest 
 cd UCrapidtest
 chmod +x ./unifyServer
 ./unifyServer diagnostic
-env SCRIPTCALL=1 ./unifyServer nuke yes
+./unifyServer nuke yes
 cd ..
 rm -rf UCrapditest
 echo done
