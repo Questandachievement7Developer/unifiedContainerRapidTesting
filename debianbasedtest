@@ -1,0 +1,12 @@
+#!/bin/sh
+export SCRIPTCALL=1
+if [ -z $(which git) ];then
+su -c "apt-get install git -y"
+fi
+git clone https://github.com/Questandachievement7Developer/UnifiedContainer UCrapidtest 
+cd UCrapidtest
+chmod +x ./unifyServer
+./unifyServer diagnostic
+cd ..
+proot -0 rm -rf UCrapidtest
+echo done
