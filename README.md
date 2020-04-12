@@ -1,2 +1,2 @@
 # unifiedContainrrRapidTesting
-A base code to do massive testing
+Script to do massive testing on unifyServer compatibility
