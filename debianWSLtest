@@ -1,0 +1,16 @@
+#!/bin/sh
+export SCRIPTCALL=1
+if [ $(whoami) != "root" ];then
+echo please do it using root
+exit
+fi
+if [ -z $(which git) ];then
+sudo apt-get install git -y
+fi
+git clone https://github.com/Questandachievement7Developer/UnifiedContainer UCrapidtest 
+cd UCrapidtest
+chmod +x ./unifyServer
+./unifyServer diagnostic
+cd ..
+rm -rf UCrapidtest
+echo done
