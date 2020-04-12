@@ -1,0 +1,12 @@
+#!/bin/sh
+echo Hello Welcome to the empiresandallies complex server
+pkg install git -y
+if [ -z $(which bay) ]; then
+git clone https://github.com/Questandachievement7Developer/UnifiedContainer UCrapidtest 
+cd UCrapidtest
+chmod +x ./unifyServer
+./unifyServer diagnostic
+env SCRIPTCALL=1 ./unifyServer nuke yes
+cd ..
+rm -rf UCrapditest
+echo done
