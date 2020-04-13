@@ -6,5 +6,6 @@ cd UCrapidtest
 chmod +x ./unifyServer
 ./unifyServer diagnostic
 cd ..
+sleep 5
 proot -0 rm -rf UCrapidtest
 echo done
