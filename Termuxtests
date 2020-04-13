@@ -7,5 +7,10 @@ chmod +x ./unifyServer
 ./unifyServer diagnostic
 cd ..
 sleep 5
+cleanup(){
 proot -0 rm -rf UCrapidtest
+if [ -d UCrapidtest ]; then
+cleanup
+fi
+}
 echo done
